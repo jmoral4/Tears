@@ -11,7 +11,7 @@ namespace Tears.Components
 {
     public class TextureManager
     {
-        private Dictionary<string, Texture2D> _textureLibrary;
+        private readonly Dictionary<string, Texture2D> _textureLibrary;
 
         public TextureManager ()
         {
@@ -21,6 +21,7 @@ namespace Tears.Components
         public void Load(string id, Texture2D texture )
         {
             Debug.Assert(texture != null, "LOAD() texture != null");
+            Debug.Assert(_textureLibrary != null, "_textureLibrary != null");
             if (_textureLibrary.ContainsKey(id))
             {
                 _textureLibrary[id] = texture;
@@ -41,5 +42,16 @@ namespace Tears.Components
             throw new KeyNotFoundException("Texture with id [" + id + "] was not found!");
         }
 
+        public bool Remove(string id)
+        {
+            Debug.Assert(_textureLibrary != null, "_textureLibrary != null");
+            return _textureLibrary.Remove(id);
+        }
+
+        public void ClearAll()
+        {
+            Debug.Assert(_textureLibrary != null, "_textureLibrary != null");
+            _textureLibrary.Clear();
+        }
     }
 }

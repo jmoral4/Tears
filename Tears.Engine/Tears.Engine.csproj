@@ -52,6 +52,16 @@
   <ItemGroup>
     <Folder Include="Content\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tears.Entities\Tears.Entities.csproj">
+      <Project>{92e212f3-a314-47f8-9de5-611ab455e2b3}</Project>
+      <Name>Tears.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="Tears.Components\Tears.Components.csproj">
+      <Project>{a5240395-aa4b-4333-ab9c-ab6126ba49f2}</Project>
+      <Name>Tears.Components</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

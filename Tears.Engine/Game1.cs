@@ -7,6 +7,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 using Microsoft.Xna.Framework.GamerServices;
+using Tears.Components;
+
 #endregion
 
 namespace Tears.Engine
@@ -18,6 +20,7 @@ namespace Tears.Engine
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        private TextureManager _tr;
 
         public Game1()
             : base()
