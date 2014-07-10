@@ -1,11 +1,10 @@
-﻿//TEars.Engine is a TBS similar to civ/or any tbs, in space
-
+﻿//  Tears.Engine is a TBS similar to civ/or any tbs, in space
 Conceptual
 	
 Dynamic
-	
-Static
-	
+	//all entities which implement I moveable
+Static	
+	//all static entities (don't move around)
 
 Base->
 	Id
@@ -22,7 +21,6 @@ Moveable
 	range	
 	vector //where is it headed
 
-
 Something can be Renderable and Collidable
 Something can be Renderable and not collidable
 Everything on screen needs a location rectangle
@@ -35,5 +33,3 @@ Example
 	Planet -> Renderable, Collidable, IPlanet, BaseEntity
 	Asteroid -> Renderable, collidable, moveable, IAnomaly, BaseEntity
 	// keep conceptual entities entirely out of this object structure
-
-

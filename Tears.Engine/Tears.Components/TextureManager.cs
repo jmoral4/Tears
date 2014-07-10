@@ -1,0 +1,45 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+
+namespace Tears.Components
+{
+    public class TextureManager
+    {
+        private Dictionary<string, Texture2D> _textureLibrary;
+
+        public TextureManager ()
+        {
+            _textureLibrary = new Dictionary<string, Texture2D>();
+        }
+
+        public void Load(string id, Texture2D texture )
+        {
+            Debug.Assert(texture != null, "LOAD() texture != null");
+            if (_textureLibrary.ContainsKey(id))
+            {
+                _textureLibrary[id] = texture;
+            }
+            else
+            {
+                _textureLibrary.Add(id, texture);    
+            }            
+
+        }
+
+        public Texture2D GetTexture2D(string id)
+        {
+            Debug.Assert(_textureLibrary != null, "GetTexture2D _textureLibrary != null");
+            Texture2D texture;            
+            if (_textureLibrary.TryGetValue(id, out texture))
+                return texture;
+            throw new KeyNotFoundException("Texture with id [" + id + "] was not found!");
+        }
+
+    }
+}
