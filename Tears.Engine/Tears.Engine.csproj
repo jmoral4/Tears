@@ -47,11 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Textures\blocksheet.png" />
+    <Content Include="Content\Textures\dickbutt.png" />
+    <Content Include="Content\Textures\man1.png" />
+    <Content Include="Content\Textures\map.txt" />
+    <Content Include="Content\Textures\xxman1.png" />
     <Content Include="Icon.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Content\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Tears.Entities\Tears.Entities.csproj">
       <Project>{92e212f3-a314-47f8-9de5-611ab455e2b3}</Project>
