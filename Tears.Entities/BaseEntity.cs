@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework;
 
 namespace Tears.Entities
 {
-    abstract class BaseEntity
+    public abstract class BaseEntity
     {
         public Guid ObjectId { get; set; }
         public string Name { get; set; }

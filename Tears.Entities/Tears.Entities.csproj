@@ -42,20 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseEntity.cs" />
-    <Compile Include="Conceptual\ResearchItem.cs" />
     <Compile Include="Dynamic\IMoveable.cs" />
     <Compile Include="IRenderable.cs" />
-    <Compile Include="Dynamic\IStarship.cs" />
-    <Compile Include="Static\Planet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="plan.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Conceptual\PlanetUpgrades\" />
-    <Folder Include="Conceptual\ResearchItems\" />
-    <Folder Include="Conceptual\ShipParts\" />
+    <Folder Include="Static\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

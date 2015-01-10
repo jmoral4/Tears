@@ -33,3 +33,4 @@ Example
 	Planet -> Renderable, Collidable, IPlanet, BaseEntity
 	Asteroid -> Renderable, collidable, moveable, IAnomaly, BaseEntity
 	// keep conceptual entities entirely out of this object structure
+

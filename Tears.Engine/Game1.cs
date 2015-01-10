@@ -8,6 +8,8 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 using Microsoft.Xna.Framework.GamerServices;
 using Tears.Components;
+using Tears.Entities;
+using Tears.Entities.Dynamic;
 
 #endregion
 
@@ -40,6 +42,8 @@ namespace Tears.Engine
             // TODO: Add your initialization logic here
 
             base.Initialize();
+
+
         }
 
         /// <summary>
@@ -52,6 +56,9 @@ namespace Tears.Engine
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+            
+                
+
         }
 
         /// <summary>
@@ -72,6 +79,9 @@ namespace Tears.Engine
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
+
+            
+            
 
             // TODO: Add your update logic here
 

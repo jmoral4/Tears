@@ -8,14 +8,16 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace Tears.Components
-{
+{    
+
     public class TextureManager
     {
         private readonly Dictionary<string, Texture2D> _textureLibrary;
 
         public TextureManager ()
         {
-            _textureLibrary = new Dictionary<string, Texture2D>();
+            _textureLibrary = new Dictionary<string, Texture2D>();           
+
         }
 
         public void Load(string id, Texture2D texture )
