@@ -63,7 +63,7 @@ namespace Tears.Engine
 
                 gameFont = content.Load<SpriteFont>("gamefont");
 
-                // A real game would probably have more content than this sample, so
+                // A real game would probably have more content than this, so
                 // it would take longer to load. We simulate that by delaying for a
                 // while, giving you a chance to admire the beautiful loading screen.
                 Thread.Sleep(1000);
@@ -73,23 +73,11 @@ namespace Tears.Engine
                 // it should not try to catch up.
                 ScreenManager.Game.ResetElapsedTime();
             }
-
-#if WINDOWS_PHONE
-            if (Microsoft.Phone.Shell.PhoneApplicationService.Current.State.ContainsKey("PlayerPosition"))
-            {
-                playerPosition = (Vector2)Microsoft.Phone.Shell.PhoneApplicationService.Current.State["PlayerPosition"];
-                enemyPosition = (Vector2)Microsoft.Phone.Shell.PhoneApplicationService.Current.State["EnemyPosition"];
-            }
-#endif
         }
 
 
         public override void Deactivate()
         {
-#if WINDOWS_PHONE
-            Microsoft.Phone.Shell.PhoneApplicationService.Current.State["PlayerPosition"] = playerPosition;
-            Microsoft.Phone.Shell.PhoneApplicationService.Current.State["EnemyPosition"] = enemyPosition;
-#endif
 
             base.Deactivate();
         }
@@ -102,10 +90,6 @@ namespace Tears.Engine
         {
             content.Unload();
 
-#if WINDOWS_PHONE
-            Microsoft.Phone.Shell.PhoneApplicationService.Current.State.Remove("PlayerPosition");
-            Microsoft.Phone.Shell.PhoneApplicationService.Current.State.Remove("EnemyPosition");
-#endif
         }
 
 
@@ -145,8 +129,7 @@ namespace Tears.Engine
 
                 enemyPosition = Vector2.Lerp(enemyPosition, targetPosition, 0.05f);
 
-                // TODO: this game isn't very fun! You could probably improve
-                // it by inserting something more interesting in this space :-)
+                // You could probably improve it by inserting something more interesting in this space :-)
             }
         }
 
@@ -176,11 +159,8 @@ namespace Tears.Engine
             PlayerIndex player;
             if (pauseAction.Evaluate(input, ControllingPlayer, out player) || gamePadDisconnected)
             {
-#if WINDOWS_PHONE
-                ScreenManager.AddScreen(new PhonePauseScreen(), ControllingPlayer);
-#else
+
                 ScreenManager.AddScreen(new PauseMenuScreen(), ControllingPlayer);
-#endif
             }
             else
             {
@@ -224,8 +204,7 @@ namespace Tears.Engine
         /// Draws the gameplay screen.
         /// </summary>
         public override void Draw(GameTime gameTime)
-        {
-            // This game has a blue background. Why? Because!
+        {           
             ScreenManager.GraphicsDevice.Clear(ClearOptions.Target,
                                                Color.CornflowerBlue, 0, 0);
 
