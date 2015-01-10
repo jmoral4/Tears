@@ -1,1 +1,5 @@
-Testing Commit settings
+Tears is a test platform for a MonoGame engine used to play with 2D gameplay concepts. 
+
+Thus far it includes a TextureManager and ScreenManager.
+
+Not intended for re-use by others as the check-ins often massively change content in order to experiment with new ideas.
