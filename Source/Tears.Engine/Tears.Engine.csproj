@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{C70C6F43-57CA-4589-9114-5C8869F68AC6}</ProjectGuid>
+    <ProjectGuid>{FE053FFE-CD36-42D4-9CB3-D03292B849AA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Tears.Engine</RootNamespace>
@@ -65,17 +65,16 @@
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Source\Tears.Content\Tears.Content\Tears.Content.csproj">
-      <Project>{7de7fa80-b4d4-4232-8daf-c43e48d6a462}</Project>
-      <Name>Tears.Content</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Tears.Entities\Tears.Entities.csproj">
-      <Project>{92e212f3-a314-47f8-9de5-611ab455e2b3}</Project>
-      <Name>Tears.Entities</Name>
-    </ProjectReference>
-    <ProjectReference Include="Tears.Components\Tears.Components.csproj">
+    <Folder Include="Content\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tears.Components\Tears.Components.csproj">
       <Project>{a5240395-aa4b-4333-ab9c-ab6126ba49f2}</Project>
       <Name>Tears.Components</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tears.Content\Tears.Content\Tears.Content.csproj">
+      <Project>{7de7fa80-b4d4-4232-8daf-c43e48d6a462}</Project>
+      <Name>Tears.Content</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

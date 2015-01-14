@@ -70,11 +70,13 @@
       <Name>blocksheet</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Textures\dickbutt.png">
       <Name>dickbutt</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Textures\man1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
