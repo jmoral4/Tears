@@ -62,37 +62,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\background.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\blank.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\gradient.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\Textures\blocksheet.png" />
-    <Content Include="Content\Textures\dickbutt.png" />
-    <Content Include="Content\Textures\man1.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\Textures\map.txt" />
-    <Content Include="Content\Textures\xxman1.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Content\gamefont.spritefont" />
-    <None Include="Content\gamefont.xnb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Content\menufont.spritefont" />
-    <None Include="Content\menufont.xnb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\Source\Tears.Content\Tears.Content\Tears.Content.csproj">
+      <Project>{7de7fa80-b4d4-4232-8daf-c43e48d6a462}</Project>
+      <Name>Tears.Content</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Tears.Entities\Tears.Entities.csproj">
       <Project>{92e212f3-a314-47f8-9de5-611ab455e2b3}</Project>
       <Name>Tears.Entities</Name>
