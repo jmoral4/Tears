@@ -1,13 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tears.Engine", "Tears.Engine.csproj", "{C70C6F43-57CA-4589-9114-5C8869F68AC6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tears.Entities", "..\Tears.Entities\Tears.Entities.csproj", "{92E212F3-A314-47F8-9DE5-611AB455E2B3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tears.Components", "Tears.Components\Tears.Components.csproj", "{A5240395-AA4B-4333-AB9C-AB6126BA49F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{E58C7340-F544-476B-BE39-F189EBB352DF}"
+	ProjectSection(SolutionItems) = preProject
+		Engine.notes = Engine.notes
+		Plan.plan = Plan.plan
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,14 @@
+
+init - check :
+
+Check system:
+harddrive , memory, input , output, cpu speed (reqs)
+
+Setup Key components:
+RNG, programmer debug options,
+
+Load player components:
+ player game options, saved games
+
+ Init systems:
+  init audio (if needed), init window (if needed), physics, AI

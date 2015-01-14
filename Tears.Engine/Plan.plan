@@ -1,0 +1,36 @@
+//  Tears.Engine is a real-time rpg engine - in the vein of Shadowrun for Sega genesis
+Conceptual
+	
+Dynamic
+	//all entities which implement I moveable
+Static	
+	//all static entities (don't move around)
+
+Base->
+	Id
+	Name
+	Description
+	Location -> cell x/y
+
+Renderable
+	Rect
+	Texture
+
+Moveable
+	speed //in tiles
+	range	
+	vector //where is it headed
+
+Something can be Renderable and Collidable
+Something can be Renderable and not collidable
+Everything on screen needs a location rectangle
+All renderables need textures and color information
+Conceptual Entities do not need location nor collidable nor texture information
+Conceptuals should derive from something else entirely...
+
+Example
+	Capital Ship->Renderable, Moveable, Collidable, IShip, BaseEntity
+	Planet -> Renderable, Collidable, IPlanet, BaseEntity
+	Asteroid -> Renderable, collidable, moveable, IAnomaly, BaseEntity
+	// keep conceptual entities entirely out of this object structure
+
