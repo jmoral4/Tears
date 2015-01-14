@@ -8,8 +8,8 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 using Microsoft.Xna.Framework.GamerServices;
 using Tears.Components;
-//using Tears.Entities;
-//using Tears.Entities.Dynamic;
+using Tears.Entities;
+using Tears.Entities.Dynamic;
 
 #endregion
 
