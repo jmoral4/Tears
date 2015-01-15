@@ -15,11 +15,43 @@ Load player components:
  
  InitInstance() 
    Check for Multiple instances
+       Create mutex to gate instance access to detection logic
+       Use window API to find current window title and verify there isn't one presently running
    check secondary storage and memory
+        //check this function --- see if we need to combine the counts or what .. also MaxCapacity vs Capacity query
+       private static void DisplayTotalRam()
+       {
+         string Query = "SELECT MaxCapacity FROM Win32_PhysicalMemoryArray";
+         ManagementObjectSearcher searcher = new ManagementObjectSearcher(Query);
+         foreach (ManagementObject WniPART in searcher.Get())
+         {
+           UInt32 SizeinKB = Convert.ToUInt32(WniPART.Properties["MaxCapacity"].Value);
+           UInt32 SizeinMB = SizeinKB / 1024;
+           UInt32 SizeinGB = SizeinMB / 1024;
+           Console.WriteLine("Size in KB: {0}, Size in MB: {1}, Size in GB: {2}", SizeinKB, SizeinMB, SizeinGB);
+         }
+       }
    calculate cpu speed
+       Environment.ProcessorCount  //logical processors
+       using System.Management;
+       public uint CPUSpeed()
+       {
+         ManagementObject Mo = new ManagementObject("Win32_Processor.DeviceID='CPU0'");
+         uint sp = (uint)(Mo["CurrentClockSpeed"]);
+         Mo.Dispose();
+         return sp;
+       }
+       
+       
    load game's resource cache
+       Look at creating a resource loader in place of the content and texturemanager
+       
    load strings (menus/ui)
+   
    create script manager (LUA/etc)
+        Possible to use C# directly taking same path as previous C# plugin projects (MEF or compiled scriptS)
+        Possible to host PowerShell DLL directly and embed powershell in application
+   
    create event manager
    use script manager to init game options
    create screen manager
