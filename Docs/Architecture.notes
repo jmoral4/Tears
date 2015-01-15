@@ -27,3 +27,5 @@ Game/Engine Architecture and Component Architecture
       - multi-threaded (rendering and updates)
       - co-operative multi-tasking (slice cpu time)
        Can Task<> and Parallel<> be used for this?
+
+  Background loading during transitions?
