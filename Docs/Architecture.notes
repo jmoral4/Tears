@@ -1,0 +1,29 @@
+
+Game/Engine Architecture and Component Architecture
+
+- Abandon Entity in favor of Actor (also less naming confusion/collision with EF entities)
+
+
+ class Actor
+    ActorId id {get;set;}
+    Vector3 position {get;set;}
+    Owner? //clarify when/how we can purge when unused and reclaim memory
+    
+ RenderableActor
+    Texture texture {get;set;}
+    Draw()
+    Update()
+  
+  Favor interfaces which allow composition 
+  Actors defined in XML? loaded via factory?
+  List of components
+  
+  Spatial partitioning system to avoid having to lookup hundreds of actors to resolve things like collision
+  
+  Messaging System -- components post messages, others read and execute if applicable
+  
+  Process management 
+      - one monolithic process
+      - multi-threaded (rendering and updates)
+      - co-operative multi-tasking (slice cpu time)
+       Can Task<> and Parallel<> be used for this?
