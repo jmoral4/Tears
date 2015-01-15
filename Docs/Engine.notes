@@ -14,6 +14,8 @@ Load player components:
   init audio (if needed), init window (if needed), physics, AI
  
  InitInstance() 
+   Setup Logging System 
+ 
    Check for Multiple instances
        Create mutex to gate instance access to detection logic
        Use window API to find current window title and verify there isn't one presently running
@@ -57,6 +59,13 @@ Load player components:
    create screen manager
    init game screens
    set directory for save and temp files
+         //use special folders to get AppData and PersonalData folders 
+         http://msdn.microsoft.com/en-us/library/s2esdf4x%28v=vs.90%29.aspx
    preload resources from resource cache
  
- Setup Logging System 
+   Exiting:
+         Funnel all exit to one routine
+         Write exit state of any Singletons to disk
+         Dump all memory info to disk
+         Clear, purge and shutdown any systems
+         Any final debug writes/output
