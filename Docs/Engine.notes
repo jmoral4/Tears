@@ -12,3 +12,19 @@ Load player components:
 
  Init systems:
   init audio (if needed), init window (if needed), physics, AI
+ 
+ InitInstance() 
+   Check for Multiple instances
+   check secondary storage and memory
+   calculate cpu speed
+   load game's resource cache
+   load strings (menus/ui)
+   create script manager (LUA/etc)
+   create event manager
+   use script manager to init game options
+   create screen manager
+   init game screens
+   set directory for save and temp files
+   preload resources from resource cache
+ 
+ Setup Logging System 
