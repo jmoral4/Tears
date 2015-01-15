@@ -69,7 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Tears.Components\Tears.Components.csproj">
-      <Project>{a5240395-aa4b-4333-ab9c-ab6126ba49f2}</Project>
+      <Project>{455a0b8a-f066-42f5-aaa0-ee06e5f83a77}</Project>
       <Name>Tears.Components</Name>
     </ProjectReference>
     <ProjectReference Include="..\Tears.Content\Tears.Content\Tears.Content.csproj">
