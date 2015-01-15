@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Content", "Content", "{E0648DE1-A3DF-43F7-8214-12801C25BB31}"
 EndProject
@@ -17,7 +17,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tears.Components", "Tears.C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{05059F86-5EA4-4D40-9F0C-8E4D87AD7719}"
 	ProjectSection(SolutionItems) = preProject
+		..\Docs\Architecture.notes = ..\Docs\Architecture.notes
 		..\Docs\Engine.notes = ..\Docs\Engine.notes
+		..\Docs\Ideas.thoughts = ..\Docs\Ideas.thoughts
 		..\Docs\plan.txt = ..\Docs\plan.txt
 	EndProjectSection
 EndProject
