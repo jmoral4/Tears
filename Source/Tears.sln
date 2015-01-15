@@ -15,6 +15,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tears.Entities", "Tears.Ent
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tears.Components", "Tears.Components\Tears.Components.csproj", "{455A0B8A-F066-42F5-AAA0-EE06E5F83A77}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{05059F86-5EA4-4D40-9F0C-8E4D87AD7719}"
+	ProjectSection(SolutionItems) = preProject
+		..\Docs\Engine.notes = ..\Docs\Engine.notes
+		..\Docs\plan.txt = ..\Docs\plan.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Android|Any CPU = Android|Any CPU

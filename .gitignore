@@ -213,3 +213,5 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+/Game/Tears.Engine.vshost.exe.manifest
