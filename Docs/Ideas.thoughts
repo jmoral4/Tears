@@ -9,3 +9,41 @@ Original concept was similar to SEGA Shadowrun
    Button 1 Cycle Targets, Button 2 Fire Current, Scroll switch Characters
    Move with WASD/ARROWS 
    On GamePad (X / A / B ) + Arrows
+   
+What _I_ like as a gamer in 2D indie top-downs:
+     Characters
+     Items
+     Diverse Maps
+     Diverse Enemies
+     Long Gameplay
+     Scaling, Challenging Gameplay
+  
+Tears concept where it's DF or Digital Reset or SCZ.. should include the following
+     Characters
+     Mutiplayer (at least 2)
+     Unique Items
+     Randomly generated 'path'
+     
+Ideas:
+     Utilizing the SGSR targetting system we can have both click attacks on targets and lock-on attacks on other targets.
+     For instance, slash sword with click, lock and fire with other click, move with WASD?
+     Click-to-move is incompatible with console controller but more compatible with tablets/phones
+     Can also do Click-to-move but also have Q as acquire target and E as fire (for specials/and or alt weapon)
+     
+     Image in my head is of person with Sword and hand-cannon, click to move, click to attack with sword
+     Q to acquire cannon target, E to fire powerful AoE shot
+     
+     Controller compatible is:
+           D-pad move
+           A primary attack, B secondary attack, x?  y? r? l? rb? lb? 
+      
+      If we approach with controller compatibility as our objective -- 
+         we know we have a max of 8 forms of interaction + movement with optional duplicated movement 
+         or D-pad as further 4 further options and joystick as single movement option
+      this gives us a hard cap (good) on structuring interactivity. 
+      Note: The witcher 2 is an excellent example of too many abilities/interactions on a keyboard. 
+             Ideally, we shouldn't use more than can be mapped to Mouse+WASD and -maybe- 1-5
+           
+     
+     
+     
