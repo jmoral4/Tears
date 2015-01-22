@@ -28,6 +28,12 @@ namespace Tears.Engine
             : base()
         {
             graphics = new GraphicsDeviceManager(this);
+            graphics.IsFullScreen = true;
+            graphics.PreferredBackBufferHeight = 1050;
+            graphics.PreferredBackBufferWidth = 1680;
+            Window.IsBorderless = true;
+            
+            
             Content.RootDirectory = "Content";
             TargetElapsedTime = TimeSpan.FromTicks(333333);
 
@@ -40,6 +46,18 @@ namespace Tears.Engine
             Components.Add(screenManager);
 
             AddInitialScreens();
+
+            //IntPtr hWnd = this.Window.Handle;
+            //var control = System.Windows.Forms.Control.FromHandle(hWnd);
+            //var form = control.FindForm();
+            //form.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            //form.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+
+            //var screen = Screen.AllScreens.First(e => e.Primary);
+            //Window.IsBorderless = true;
+            //Window.Position = new Point(screen.Bounds.X, screen.Bounds.Y);
+            //graphics.PreferredBackBufferWidth = screen.Bounds.Width;
+            //graphics.PreferredBackBufferHeight = screen.Bounds.Height;
         }
 
         private void AddInitialScreens()

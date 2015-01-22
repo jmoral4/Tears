@@ -22,7 +22,7 @@ namespace Tears.Engine
         ContentManager content;
         SpriteFont gameFont;
 
-        Vector2 playerPosition = new Vector2(100, 100);
+        Vector2 playerPosition = new Vector2(0, 0);
         Vector2 enemyPosition = new Vector2(100, 100);
 
         Random random = new Random();
@@ -30,6 +30,15 @@ namespace Tears.Engine
         float pauseAlpha;
 
         InputAction pauseAction;
+
+        Texture2D _levelMap;
+        private Texture2D _man;
+
+        private float _scaleFactor;
+        private Rectangle _camera;
+        private Rectangle _screenRectangle;
+        private Vector2 _playerLoc;
+
 
         #endregion
 
@@ -63,10 +72,18 @@ namespace Tears.Engine
 
                 gameFont = content.Load<SpriteFont>("gamefont");
 
+                _levelMap = content.Load<Texture2D>("LegendOfZelda-SecondQuest-Level-9-lg");
+                _man = content.Load<Texture2D>("Textures/xxman1");
+
+                _camera = new Rectangle(0,0, 256, 128);
+                _playerLoc = new Vector2(0,0);
+                _screenRectangle = new Rectangle(0, 0, ScreenManager.GraphicsDevice.Viewport.Width,
+                    ScreenManager.GraphicsDevice.Viewport.Height);
+              
                 // A real game would probably have more content than this, so
                 // it would take longer to load. We simulate that by delaying for a
                 // while, giving you a chance to admire the beautiful loading screen.
-                Thread.Sleep(1000);
+                //Thread.Sleep(1000);
 
                 // once the load has finished, we use ResetElapsedTime to tell the game's
                 // timing mechanism that we have just finished a very long frame, and that
@@ -195,7 +212,9 @@ namespace Tears.Engine
                 if (movement.Length() > 1)
                     movement.Normalize();
 
-                playerPosition += movement * 8f;
+                playerPosition += movement * 2f;
+
+                
             }
         }
 
@@ -204,7 +223,8 @@ namespace Tears.Engine
         /// Draws the gameplay screen.
         /// </summary>
         public override void Draw(GameTime gameTime)
-        {           
+        {
+            _camera = new Rectangle((int)playerPosition.X, (int)playerPosition.Y, 256, 128);
             ScreenManager.GraphicsDevice.Clear(ClearOptions.Target,
                                                Color.CornflowerBlue, 0, 0);
 
@@ -213,10 +233,13 @@ namespace Tears.Engine
 
             spriteBatch.Begin();
 
-            spriteBatch.DrawString(gameFont, "// TODO", playerPosition, Color.Green);
+            //spriteBatch.DrawString(gameFont, "// TODO", playerPosition, Color.Green);
 
-            spriteBatch.DrawString(gameFont, "Insert Gameplay Here",
-                                   enemyPosition, Color.DarkRed);
+            //spriteBatch.DrawString(gameFont, "Insert Gameplay Here",
+                                  // enemyPosition, Color.DarkRed);
+            spriteBatch.Draw(_levelMap, _screenRectangle, _camera, Color.White);
+            spriteBatch.Draw(_man, new Vector2(ScreenManager.GraphicsDevice.Viewport.Width / 2, ScreenManager.GraphicsDevice.Viewport.Height/2), Color.White);
+            
 
             spriteBatch.End();
 
