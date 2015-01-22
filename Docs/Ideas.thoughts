@@ -49,3 +49,7 @@ Ideas:
          perhaps align the concept with my older ToV or AoD concepts which have a great narrative growth structure
          which would be foreign to most gamers. Note to self: "I am the Word"
      
+Quad Tree Implementation: http://www.codeproject.com/Articles/30535/A-Simple-QuadTree-Implementation-in-C
+Physics: https://sites.google.com/site/physics2d/
+
+Clever...   we can use a separate color to implement a physics collidable layer..   we can use physics.net to convert the physics bitmap into polygon colliders for custom stuff like "walls kill you" or "bouncy walls" etc..
