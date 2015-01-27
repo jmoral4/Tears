@@ -40,3 +40,73 @@
         public Rectangle CameraStart {get;set;}
         public Vector2 PlayerStart {get;set;}        
     }
+
+public interface IRenderable : IComparable<IRenderable>
+{
+    Guid Id {get;set;}
+    int Depth {get;set;}
+    Texture2D Sprite {get;set;}
+    Rectangle Source {get;set;}
+    Rectangle Destination {get;set;}
+    Color Color {get;set;}
+}
+
+public class Sprite : IRenderable
+{    
+    Guid Id = Guid.New();
+    int Depth {get;set;}
+    Texture2D Sprite {get;set;}
+    Rectangle Source {get;set;}
+    Rectangle Destination {get;set;}
+    Color Color {get;set;}
+    public int CompareTo( IRenderable other)
+    {
+        return this.Depth.CompareTo(other.Depth);
+    }    
+}
+
+
+/// <summary>
+/// The scenegraph handles sorted rendering of all objects in the scene from back-to front
+/// Each Screen may have its own scenegraph to handle ordeed rendering within its own context
+/// The Screen is responsible for calling Reset() within its Update() method (if needed)
+/// Reset is primarily used to ensure that dead objects are purged. For instance, if using 
+/// short-lifetime objects like projectiles, you want to ensure that they're removed from the screen 
+//  when their object lifetime has ended
+/// </summary>
+public class SceneGraph
+{
+      private ScreenManager ScreenManagerRef; //may not be needed
+      List<IRenderable> _renderableObjects;
+      IRenderable[] _shortTermObjects;
+
+      public SceneGraph()
+      {          
+        _renderableObjects = new List<IRenderable>();        
+      }
+
+      public void Reset()
+      {
+         // called on the update loop to clear all renderableObjects and insert any new living objects
+         _renderableObjects.Clear();          
+      }
+
+      public void AddRenderable( IRenderable renderable )
+      {
+         _renderableObjects.Add(renderable);
+      }
+
+      public void Draw( SpriteBatch spriteBatch )
+      {
+         //sorted back to front using Icomparables interface
+         //back depth is 0, front depth is anything greater than 0
+         _renderableObjects.Sort();
+         spriteBatch.Begin();
+         foreach(var r in _rendableObjects)
+            spriteBatch.Draw( r.Sprite, r.Source, r.Destination, r.Color );
+         spriteBatch.End();
+      }
+
+
+}
+
