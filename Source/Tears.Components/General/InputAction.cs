@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
-namespace Tears.Components
+namespace Tears.Components.General
 {
     /// <summary>
     /// Defines an action that is designated by some set of buttons and/or keys.

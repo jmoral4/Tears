@@ -1,17 +1,11 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using System.Diagnostics;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input.Touch;
-using System.IO;
-using System.IO.IsolatedStorage;
-using System.Xml.Linq;
 
-namespace Tears.Components
+namespace Tears.Components.General
 {
     /// <summary>
     /// The screen manager is a component which manages one or more GameScreen

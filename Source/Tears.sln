@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Content", "Content", "{E0648DE1-A3DF-43F7-8214-12801C25BB31}"
 EndProject
@@ -10,8 +10,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tears.ContentContent", "Tears.Content\Tears.ContentContent\Tears.ContentContent.contentproj", "{6E05BBE6-AC10-44B7-B55E-0AE909A51992}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tears.Engine", "Tears.Engine\Tears.Engine.csproj", "{FE053FFE-CD36-42D4-9CB3-D03292B849AA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tears.Entities", "Tears.Entities\Tears.Entities.csproj", "{D841392E-D321-45EE-90EC-C55FED1CD3FA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tears.Components", "Tears.Components\Tears.Components.csproj", "{455A0B8A-F066-42F5-AAA0-EE06E5F83A77}"
 EndProject
@@ -173,51 +171,6 @@ Global
 		{FE053FFE-CD36-42D4-9CB3-D03292B849AA}.Windows8|Mixed Platforms.Build.0 = Release|x86
 		{FE053FFE-CD36-42D4-9CB3-D03292B849AA}.Windows8|x86.ActiveCfg = Release|x86
 		{FE053FFE-CD36-42D4-9CB3-D03292B849AA}.Windows8|x86.Build.0 = Release|x86
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.Android|Any CPU.ActiveCfg = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.Android|Any CPU.Build.0 = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.Android|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.Android|Mixed Platforms.Build.0 = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.Android|x86.ActiveCfg = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.iOS|Any CPU.ActiveCfg = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.iOS|Any CPU.Build.0 = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.iOS|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.iOS|Mixed Platforms.Build.0 = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.iOS|x86.ActiveCfg = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.Linux|Any CPU.ActiveCfg = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.Linux|Any CPU.Build.0 = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.Linux|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.Linux|Mixed Platforms.Build.0 = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.Linux|x86.ActiveCfg = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.OSX|Any CPU.ActiveCfg = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.OSX|Any CPU.Build.0 = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.OSX|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.OSX|Mixed Platforms.Build.0 = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.OSX|x86.ActiveCfg = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.PSM|Any CPU.ActiveCfg = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.PSM|Any CPU.Build.0 = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.PSM|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.PSM|Mixed Platforms.Build.0 = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.PSM|x86.ActiveCfg = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.Release|x86.ActiveCfg = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.Windows|Any CPU.ActiveCfg = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.Windows|Any CPU.Build.0 = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.Windows|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.Windows|Mixed Platforms.Build.0 = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.Windows|x86.ActiveCfg = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.Windows8|Any CPU.ActiveCfg = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.Windows8|Any CPU.Build.0 = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.Windows8|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.Windows8|Mixed Platforms.Build.0 = Release|Any CPU
-		{D841392E-D321-45EE-90EC-C55FED1CD3FA}.Windows8|x86.ActiveCfg = Release|Any CPU
 		{455A0B8A-F066-42F5-AAA0-EE06E5F83A77}.Android|Any CPU.ActiveCfg = Release|Any CPU
 		{455A0B8A-F066-42F5-AAA0-EE06E5F83A77}.Android|Any CPU.Build.0 = Release|Any CPU
 		{455A0B8A-F066-42F5-AAA0-EE06E5F83A77}.Android|Mixed Platforms.ActiveCfg = Release|Any CPU

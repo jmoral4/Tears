@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Tears.Components;
+using Tears.Components.General;
 
 #endregion
 
@@ -47,7 +48,6 @@ namespace Tears.Engine
         {
             if (!instancePreserved)
             {
-                if (content == null)
                     content = new ContentManager(ScreenManager.Game.Services, "Content");
 
                 backgroundTexture = content.Load<Texture2D>("background");

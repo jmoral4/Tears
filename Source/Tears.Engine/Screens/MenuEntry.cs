@@ -3,6 +3,8 @@ using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Tears.Components;
+using Tears.Components.General;
+
 #endregion
 
 namespace Tears.Engine

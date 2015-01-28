@@ -76,10 +76,6 @@
       <Project>{7de7fa80-b4d4-4232-8daf-c43e48d6a462}</Project>
       <Name>Tears.Content</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Tears.Entities\Tears.Entities.csproj">
-      <Project>{d841392e-d321-45ee-90ec-c55fed1cd3fa}</Project>
-      <Name>Tears.Entities</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

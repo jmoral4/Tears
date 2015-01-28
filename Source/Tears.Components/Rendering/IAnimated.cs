@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 
-namespace Tears.Entities.Dynamic
+namespace Tears.Components.Rendering
 {
-    public interface IMoveable
+    public interface IAnimated
     {
-        Vector2 Direction { get; set; }
+        void Update(GameTime elapsedTime);
     }
 }

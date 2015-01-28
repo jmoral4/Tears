@@ -44,14 +44,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GameScreen.cs" />
-    <Compile Include="InputAction.cs" />
-    <Compile Include="InputState.cs" />
-    <Compile Include="IScreenFactory.cs" />
+    <Compile Include="Entities\Actor.cs" />
+    <Compile Include="Entities\Level.cs" />
+    <Compile Include="General\GameScreen.cs" />
+    <Compile Include="General\InputAction.cs" />
+    <Compile Include="General\InputState.cs" />
+    <Compile Include="General\IScreenFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ScreenManager.cs" />
-    <Compile Include="TextureManager.cs" />
+    <Compile Include="General\ScreenManager.cs" />
+    <Compile Include="General\TextureManager.cs" />
+    <Compile Include="Rendering\IAnimated.cs" />
+    <Compile Include="Rendering\IRenderable.cs" />
+    <Compile Include="Rendering\SceneGraph.cs" />
+    <Compile Include="Rendering\Sprite.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

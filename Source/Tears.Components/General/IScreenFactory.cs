@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace Tears.Components
+namespace Tears.Components.General
 {
     /// <summary>
     /// Defines an object that can create a screen when given its type.
