@@ -1,36 +1,21 @@
-﻿//  Tears.Engine is a TBS similar to civ/or any tbs, in space
-Conceptual
-	
-Dynamic
-	//all entities which implement I moveable
-Static	
-	//all static entities (don't move around)
 
-Base->
-	Id
-	Name
-	Description
-	Location -> cell x/y
+In the spirit of Get-Shit-Done (GSD) --  the file format will be in an easily modifiable CSV.
 
-Renderable
-	Rect
-	Texture
+https://github.com/JoshClose/CsvHelper
 
-Moveable
-	speed //in tiles
-	range	
-	vector //where is it headed
+This library allows for fast read/write and serialization to .net classes. Keeping the types simple for the serializer will make things easier.
 
-Something can be Renderable and Collidable
-Something can be Renderable and not collidable
-Everything on screen needs a location rectangle
-All renderables need textures and color information
-Conceptual Entities do not need location nor collidable nor texture information
-Conceptuals should derive from something else entirely...
+It will be 1 file per 'class' and each column corresponds to a simple field type
 
-Example
-	Capital Ship->Renderable, Moveable, Collidable, IShip, BaseEntity
-	Planet -> Renderable, Collidable, IPlanet, BaseEntity
-	Asteroid -> Renderable, collidable, moveable, IAnomaly, BaseEntity
-	// keep conceptual entities entirely out of this object structure
+Actors: //everything required to load an actor and set their texture
+[NAME], [TYPE], [TEXTURE NAME], [SCALE], [COLOR], [SPEED], [HP], [STAT1], [STAT2], [STAT3]
 
+LevelData:  //everything required to setup and load a level
+[LEVEL_NAME], [LEVEL_TEXTURE_NAME], [COLLISION_TEXTURE_NAME], [ACTORS_FILE_NAME]
+
+1. The engine will Read in the Level Data
+2. The engine will Read in the Level Texture
+3. The engine will Read in the collision data
+4. The engine will Read in the ACTOR templates
+5. Based on the ACTOR templates, the engine will load the required textures into the TextureManager
+6. The engine will create Actors from the ACTOR templates as needed
