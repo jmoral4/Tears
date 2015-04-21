@@ -34,6 +34,7 @@ namespace Tears.Engine
         InputAction pauseAction;
 
         Texture2D _levelMap;
+        private Texture2D _collisionMap;
         private Texture2D _man;
 
         private float _scaleFactor;
@@ -75,6 +76,7 @@ namespace Tears.Engine
                 gameFont = content.Load<SpriteFont>("gamefont");
 
                 _levelMap = content.Load<Texture2D>("LegendOfZelda-SecondQuest-Level-9-lg");
+                _collisionMap = content.Load<Texture2D>("LegendOfZelda-SecondQuest-Level-9-lg-coll-test");
                 _man = content.Load<Texture2D>("Textures/xxman1");
 
                 _camera = new Rectangle(0,0, 256, 128);
@@ -214,11 +216,27 @@ namespace Tears.Engine
                 if (movement.Length() > 1)
                     movement.Normalize();
 
+                // goofy zoom logic
+                if (keyboardState.IsKeyDown(Keys.OemPlus))
+                {
+                    _camera.Width -= 10;
+                    _camera.Height -= 10;
+                }
+                if (keyboardState.IsKeyDown(Keys.OemMinus))
+                {
+                    _camera.Height += 10;
+                    _camera.Width += 10;
+                }                
+
+
                 playerPosition += movement * 2f;
 
-                
+                _camera.X = (int) playerPosition.X;
+                _camera.Y = (int) playerPosition.Y;
+
             }
         }
+
 
 
         /// <summary>
@@ -226,9 +244,9 @@ namespace Tears.Engine
         /// </summary>
         public override void Draw(GameTime gameTime)
         {
-            _camera = new Rectangle((int)playerPosition.X, (int)playerPosition.Y, 256, 128);
+            //_camera = new Rectangle((int)playerPosition.X, (int)playerPosition.Y, 256, 128);
             ScreenManager.GraphicsDevice.Clear(ClearOptions.Target,
-                                               Color.CornflowerBlue, 0, 0);
+                Color.CornflowerBlue, 0, 0);
 
             // Our player and enemy are both actually just text strings.
             SpriteBatch spriteBatch = ScreenManager.SpriteBatch;
@@ -238,10 +256,13 @@ namespace Tears.Engine
             //spriteBatch.DrawString(gameFont, "// TODO", playerPosition, Color.Green);
 
             //spriteBatch.DrawString(gameFont, "Insert Gameplay Here",
-                                  // enemyPosition, Color.DarkRed);
+            // enemyPosition, Color.DarkRed);
             spriteBatch.Draw(_levelMap, _screenRectangle, _camera, Color.White);
-            spriteBatch.Draw(_man, new Vector2(ScreenManager.GraphicsDevice.Viewport.Width / 2, ScreenManager.GraphicsDevice.Viewport.Height/2), Color.White);
-            
+            spriteBatch.Draw(_man,
+                new Vector2(ScreenManager.GraphicsDevice.Viewport.Width/2,
+                    ScreenManager.GraphicsDevice.Viewport.Height/2), Color.White);
+
+          
 
             spriteBatch.End();
 

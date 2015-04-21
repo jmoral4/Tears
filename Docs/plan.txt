@@ -19,3 +19,10 @@ LevelData:  //everything required to setup and load a level
 4. The engine will Read in the ACTOR templates
 5. Based on the ACTOR templates, the engine will load the required textures into the TextureManager
 6. The engine will create Actors from the ACTOR templates as needed
+
+
+Note: Collision source color key : FF3DD5
+
+:testing collision - goals
+		player can traverse rooms
+		player is restricted from going off-scree
